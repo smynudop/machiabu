@@ -23,10 +23,16 @@
             color-scheme: light dark;
         }
 
+        *{
+            box-sizing: border-box;
+        }
+
         html,
         body {
             height: 100%;
-            margin: 0
+            margin: 0;
+            width: 100%;
+            max-width: 800px;
         }
 
         body {
@@ -95,6 +101,33 @@
                 filter: brightness(1.18);
             }
         }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            padding: .5em;
+            border-radius: 999px;
+            background: #111827;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: opacity 0.2s ease;
+            font-size: 90%;
+        }
+
+        .share-button:hover {
+            opacity: 0.88;
+        }
     </style>
 </head>
 
@@ -107,11 +140,14 @@
         <div class="overlay">Waiting...</div>
     </div>
     <footer>
-        <p style="text-align: center; margin-top: 20px; color: #1d2a44;">
+        <p style="text-align: center; margin: 0; color: #1d2a44;">
             <a href="https://x.com/udop" target="_blank" rel="noopener noreferrer">
                 Created by @udop
             </a>
         </p>
+        <a class="share-button" href="https://x.com/intent/tweet?text=%E6%83%85%E5%A0%B1%E6%BC%8F%E3%81%88%E3%81%84%E3%81%AE%E5%BF%83%E9%85%8D%E3%82%BC%E3%83%AD%EF%BC%81%E5%AE%89%E5%BF%83%E5%AE%89%E5%85%A8%E3%81%AA%E3%83%9E%E3%83%81%E3%82%A2%E3%83%96&url=https%3A%2F%2Fsmynudop.github.io%2Fmachiabu" target="_blank" rel="noopener noreferrer">
+            X でシェア
+        </a>
     </footer>
 </body>
 
